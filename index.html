@@ -5,15 +5,30 @@ body {
   background-image: url('farm.jpg');
   background-size: cover;
 }
+
+label {
+background-color:rgba(224, 224, 224, .9);
+
+}
+
+h2 {
+background-color:rgba(224, 224, 224, .5);
+font-size: 4vw;
+color: green;
+font-family: Garamond;
+text-shadow: 2px 2px yellow;
+padding: 15px;
+}
+
 </style>
 
 <body>
 
 
 
-<h2>Angry Lips</h2> 
+<h2> <center>Angry Lips (Farmer Edition)</h2> 
 
-<form id="muhForm" style="background-color:rgba(224, 224, 224, 0.5);"">
+<form id="muhForm" style="background-color:rgba(224, 224, 224, 0.5); padding: 35px;">
   <label for="name">Name:</label><br>
   <input type="text" id="name" name="name"><br><br>
 
@@ -45,25 +60,40 @@ body {
   <input type="text" id="verb3" name="verb3"><br><br>
 
 
-<!--
-
-    <label for="disc">Describe yo self:</label><br>
-    <textarea rows="5" cols="42" id="disc"></textarea><br><br>
-    
-    <label for="cars">Choose a Hobby:</label>
+    <label for="cars">Choose an ending:</label>
 <select id="hobby" name="hobby">
-  <option value="instrument">Playing Instrument</option>
-  <option value="exercise">Exercise</option>
-  <option value="reading">Reading</option>
-  <option value="drawing">Drawing</option>
+    <option value="<center> <br> The End <br> <br> Also stop being so indecisive >:( <br>">Indecisive ending</option>
+  <option value="<center> <br> Everyone lived happily ever after">Happy ending</option>
+  <option value="<center> <br> Everyone died in a fire">Disaster ending</option>
+    <option value="<center> <br> Everyone got really sad and cried :(">Sad ending</option>
+  <option value="<center> <br> Life went on as normal after that.">Boring ending</option>
+  <option value="<center> <br> *EXPLOSIONS* THE END"> Dramatic ending </option>
 </select>
   
--->
+  <br><br>
+
+<label for="company">Choose a Company:</label> 
+
+<br>
+<input type="radio" id="chip" name="company" value="John Deer">
+<label for="chip">John Deer</label>     
+
+<br>
+<input type="radio" id="chocolate" name="company" value="Murdoch's">
+<label for="chocolate"> Murdoch's </label>
+
+<br>
+<input type="radio" id="chocolate" name="company" value="Cracker Barrel">
+<label for="chocolate"> Cracker Barrel </label>
+
+<br>
+<input type="radio" id="chocolate" name="company" value="Stetson hats">
+<label for="chocolate"> Stetson </label>
 
 <br><br> <input type="submit" value="Submit">
 </form>
 
-<div id="formContents" style="background-color:rgba(224, 224, 224, 1); font-size: 2vw;"></div>
+<div id="formContents" style="background-color:rgba(224, 224, 224, .5); font-size: 2vw; color: white; text-shadow: 0 0 4px #000000;"></div>
 
 
 <script>
@@ -80,11 +110,25 @@ body {
     var noun1=document.getElementById("noun1").value;
     var adj3=document.getElementById("adj3").value;
     var verb3=document.getElementById("verb3").value;
+    var hobby=document.getElementById("hobby").value;
+    var comp=document.querySelector('input[name="company"]:checked').value;
+
+
+    var hobbyjj= document.querySelectorAll('input[name="www"]:checked')
+    var hobbyK = "";
+
+
+for (var i = 0; i < hobby.length; i++) {
+if (i > 0) {
+hobbyK += ", ";
+}
+hobbyK += hobby[i].value;
+}
 
 
     var formContents=document.getElementById("formContents");
-    formContents.innerHTML = "There once was a farmer named " + name + ". Problem was they were too " + adj1 + ". <br>" + " To fix this they bought a " + noun + ". This " + noun + " would help them " + verb1 + " and " + verb2 + "." + "<br>" + " By " + tod + " the " + noun + " had helped " + name + " become way less " + adj1 + "<br>" + " However now " + name + " was " + adj2 + " and greasy. <br> This new issue required "
-    + name + " to get a " + noun1 + ". Unfortunatley " + noun1 + " was far too " + adj3 + " so now " + name + " had to " + verb3 + " all over the place. <br> <br> UHHHH THE END";
+    formContents.innerHTML = "<center> There once was a farmer named " + name + ". Problem was they were too " + adj1 + ". <br>" + " To fix this they bought a " + noun + ". This " + noun + " would help them " + verb1 + " and " + verb2 + "." + "<br>" + " By " + tod + " the " + noun + " had helped " + name + " become way less " + adj1 + "<br>" + " However now " + name + " was " + adj2 + " and greasy. <br> This new issue required "
+    + name + " to get a " + noun1 + ". <br> Unfortunatley " + noun1 + " was far too " + adj3 + " so now " + name + " had to " + verb3 + " all over the place. <br> <br>" + hobby + " <br> <br> <br> <br>  <br> <br> <br> <br>  This story brought to you by " + comp + "<br> <br> <br> ";
        
     });
 </script>
