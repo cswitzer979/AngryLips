@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('farm.jpg');
+  background-size: cover;
+}
+</style>
+
+<body>
+
+
+
+<h2>Angry Lips</h2> 
+
+<form id="muhForm" style="background-color:rgba(224, 224, 224, 0.5);"">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br><br>
+
+    <label for="adj1">Adjective:</label><br>
+  <input type="text" id="adj1" name="adj1"><br><br>
+
+    <label for="noun">Noun (singular):</label><br>
+  <input type="text" id="noun" name="noun"><br><br>
+
+    <label for="verb1">Verb:</label><br>
+  <input type="text" id="verb1" name="verb1"><br><br>
+
+    <label for="verb2">Verb:</label><br>
+  <input type="text" id="verb2" name="verb2"><br><br>
+
+      <label for="tod">Time of day:</label><br>
+  <input type="text" id="tod" name="tod"><br><br>
+
+<label for="adj2">Adjective:</label><br>
+  <input type="text" id="adj2" name="adj2"><br><br>
+
+<label for="noun1">Noun:</label><br>
+  <input type="text" id="noun1" name="noun1"><br><br>
+
+  <label for="adj3">Adjective:</label><br>
+  <input type="text" id="adj3" name="adj3"><br><br>
+
+  <label for="verb3">Verb:</label><br>
+  <input type="text" id="verb3" name="verb3"><br><br>
+
+
+<!--
+
+    <label for="disc">Describe yo self:</label><br>
+    <textarea rows="5" cols="42" id="disc"></textarea><br><br>
+    
+    <label for="cars">Choose a Hobby:</label>
+<select id="hobby" name="hobby">
+  <option value="instrument">Playing Instrument</option>
+  <option value="exercise">Exercise</option>
+  <option value="reading">Reading</option>
+  <option value="drawing">Drawing</option>
+</select>
+  
+-->
+
+<br><br> <input type="submit" value="Submit">
+</form>
+
+<div id="formContents" style="background-color:rgba(224, 224, 224, 1); font-size: 2vw;"></div>
+
+
+<script>
+    var form=document.getElementById("muhForm");
+    form.addEventListener("submit", function(event){
+    event.preventDefault();
+    var name=document.getElementById("name").value;
+    var adj1=document.getElementById("adj1").value;
+    var noun=document.getElementById("noun").value;
+    var verb1=document.getElementById("verb1").value;
+    var verb2=document.getElementById("verb2").value;
+    var tod=document.getElementById("tod").value;
+    var adj2=document.getElementById("adj2").value;
+    var noun1=document.getElementById("noun1").value;
+    var adj3=document.getElementById("adj3").value;
+    var verb3=document.getElementById("verb3").value;
+
+
+    var formContents=document.getElementById("formContents");
+    formContents.innerHTML = "There once was a farmer named " + name + ". Problem was they were too " + adj1 + ". <br>" + " To fix this they bought a " + noun + ". This " + noun + " would help them " + verb1 + " and " + verb2 + "." + "<br>" + " By " + tod + " the " + noun + " had helped " + name + " become way less " + adj1 + "<br>" + " However now " + name + " was " + adj2 + " and greasy. <br> This new issue required "
+    + name + " to get a " + noun1 + ". Unfortunatley " + noun1 + " was far too " + adj3 + " so now " + name + " had to " + verb3 + " all over the place. <br> <br> UHHHH THE END";
+       
+    });
+</script>
+
+</body>
+</html>
